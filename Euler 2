@@ -1,0 +1,19 @@
+fib = [1, 2]
+final = []
+count = 0
+x1 = 1
+x2 = 1
+x3 = x1 + x2
+while x3 <= 4000000:
+  x1 = x2
+  x2 = x3
+  x3 = x1 + x2
+  fib.append(x3)
+  count += 1
+
+for i in range(len(fib)):
+  if fib[i] % 2 == 0:
+    final.append(fib[i])
+
+
+print(sum(final))
